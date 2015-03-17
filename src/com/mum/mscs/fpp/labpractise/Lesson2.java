@@ -21,26 +21,11 @@ public class Lesson2 {
 		Lesson2 l2 = new Lesson2();
 		
 //		l2.calculateBonus();
-		int number = 54321;
-		int value = 45321%10;
-		int valuex = 45321/10;
+//		l2.printNumberReverse();
+//		l2.oddevenarray();
+//		l2.cumulativeArray();
+		l2.whileDemo();
 		
-		int value1 = 45321%100;
-		System.out.println("Print number"+ value);
-		System.out.println("Print number"+ valuex);
-		System.out.println("Print number"+ value1);
-
-		int divider = 10;
-		StringBuffer sb = new StringBuffer();
-		while( number > 0) {
-			int quotient = number / divider;
-			int reminder = number % divider;
-			sb.append(quotient);
-			divider = divider * 10;
-			number = reminder;
-		}
-		
-		System.out.println("Reverse Number: "+sb.toString());
 	}
 	
 	/**
@@ -102,11 +87,14 @@ public class Lesson2 {
 			
 	}
 	
-	public int getBonus(int salesAmount, int percent, String performance){
+	private int getBonus(int salesAmount, int percent, String performance){
 		System.out.println("Performance  :"+performance);
 		return (salesAmount*percent)/100;
 	}
 	
+	/**
+	 * 3.	Print the number in Reverse order. Eg: Input is : 4321 Output :1234
+	 */
 	public void printNumberReverse(){
 		
 		System.out.println("Enter the Number to display in Reverse Order :");
@@ -114,12 +102,104 @@ public class Lesson2 {
 		
 		int number = getNumber.nextInt();
 		
+		int reverse = 0;
+		while( number != 0) {
+		      reverse = reverse * 10;
+	          reverse = reverse + number % 10;
+	          number = number/10;
+		}
 		
+		System.out.println("Reverse Number: "+reverse);
 		
+	}
+	
+	/**
+	 * 4.Create an array with 10 values. 
+	 *    Copy the odd value in one array and Even Value in some other array.
+	 */
+	
+	public void oddevenarray() {
 		
+		int iArray[] = {1,2,3,4,5,6,7,8,9,10};
 		
+		int evenArray[] = new int[iArray.length/2];
+		int oddArray[] = new int[iArray.length/2];
+		
+		int j = 0;
+		int k=0;
+		for (int i : oddArray) {
+			if(iArray[i] % 2 == 0) {
+				evenArray[j]=iArray[i];
+				System.out.println("Even Number :"+evenArray[j]);
+				j++;
+			} else {
+				oddArray[k]=iArray[i];
+				System.out.println("Odd  Number :"+ oddArray[k]);
+				k++;
+			}
+		}
+	}
+	
+	/**
+	 * 5.	Given an array of double values, create another array of cumulative sums. 
+	 * For example, if 5.0, 6.5, 7.3, 10.2 are the values then their cumulative sums 
+	 * are 5.0, 11.5, 18.8, 29.0. 
+	 */
+	public void cumulativeArray() {
+		
+		double[] dArray = {5.0,6.5,7.3,10.2};
+		
+		for (int i = 1; i < dArray.length; i++) {
+			dArray[i]= dArray[i]+dArray[i-1];
+		}
+		
+		for (double d : dArray) {
+			System.out.println(d);
+		}
 		
 		
 	}
+	
+	
+    /**
+     *  6.	Modify the WhileDemo.java, if the user tried more than three times to enter 
+     * pin number, display the message as “Your card has been blocked! Come to bank to 
+     * activate your card” 
+     */
+	
+	public void whileDemo() {
+		
+		Scanner keyboard = new Scanner(System.in);
+		int pin = 12345;
 
+		System.out.println("WELCOME TO THE MIDWEST ONE BANK.");
+		System.out.print("ENTER YOUR PIN: ");
+		int entry = keyboard.nextInt();
+
+		int numberoftries = 0;
+		while ( entry != pin )
+		{
+			System.out.println("\nINCORRECT PIN. remaining chances :"+(2 - numberoftries));
+			System.out.print("ENTER YOUR PIN: ");
+			if(numberoftries < 2){
+				entry = keyboard.nextInt();
+				numberoftries ++;
+			} else {
+				System.out.println("Your card has been blocked! Come to bank to activate your card");
+				return;
+				//break; // Check the SOP 'PIN ACCEPTED' in console using return / break
+			}
+			
+		}
+
+		System.out.println("\nPIN ACCEPTED. YOU NOW HAVE ACCESS TO YOUR ACCOUNT.");
+	}
+	
+	/**
+	 * 7. Find the results of each of the following expressions using operator precedence
+	 *  chart. Do the paper work. 
+	 */
+
+	
+	
 }
