@@ -16,7 +16,7 @@ public class Lesson2 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Lesson 2");
+		System.out.println("-----Lesson 2------");
 		
 		Lesson2 l2 = new Lesson2();
 		
@@ -33,11 +33,6 @@ public class Lesson2 {
 	 * 7. Find the results of each of the following expressions using operator
 	 * precedence chart. Do the paper work. 
 	 * a. 12 / 5 + 8 / 4 
-	 * 12 / 5 + 2
-	 * 2.4 + 2
-	 * 
-	 * 4.4
-	 * 
 	 * b. 3 * 4 + 15 / 2
 	 * c. -(1 + 2 * 3 + (1 + 2) * 3) 
 	 * d. 42 % 5 + 16 % 3 
