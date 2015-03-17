@@ -22,6 +22,9 @@ public class Day1 {
 		d1.convertSecondsToHMS();
 	}
 
+	/**
+	 * Print amount details
+	 */
 	public void amountDetails() {
 
 		float fnum = 11.56f;
@@ -56,6 +59,15 @@ public class Day1 {
 	}
 
 	/** Check the given year is Leap year or not using ternary operator. */
+	public void checkLeapYear(){
+		Scanner getYear = new Scanner(System.in);
+
+		System.out.println("Enter the year in 4-digit format:");
+		int year = getYear.nextInt();
+		
+		
+	}
+	
 	
 	
 	/**
