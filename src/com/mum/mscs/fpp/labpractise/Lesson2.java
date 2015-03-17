@@ -24,7 +24,33 @@ public class Lesson2 {
 //		l2.printNumberReverse();
 //		l2.oddevenarray();
 //		l2.cumulativeArray();
-		l2.whileDemo();
+//		l2.whileDemo();
+		l2.operatorPrecedenceCheck();
+		
+	}
+	
+	/**
+	 * 7. Find the results of each of the following expressions using operator
+	 * precedence chart. Do the paper work. 
+	 * a. 12 / 5 + 8 / 4 
+	 * 12 / 5 + 2
+	 * 2.4 + 2
+	 * 
+	 * 4.4
+	 * 
+	 * b. 3 * 4 + 15 / 2
+	 * c. -(1 + 2 * 3 + (1 + 2) * 3) 
+	 * d. 42 % 5 + 16 % 3 
+	 * e. 5 * 6 / 4 % 3 - 23 / (14 % 6)
+	 */
+
+	public void operatorPrecedenceCheck(){
+		
+		int iResult = 12 / 5 + 8 / 4 ;
+		System.out.println(iResult);
+		
+		float fResult = 12.0f / 5.0f + 8.0f / 4.0f ;
+		System.out.println(fResult);
 		
 	}
 	
@@ -195,11 +221,6 @@ public class Lesson2 {
 		System.out.println("\nPIN ACCEPTED. YOU NOW HAVE ACCESS TO YOUR ACCOUNT.");
 	}
 	
-	/**
-	 * 7. Find the results of each of the following expressions using operator precedence
-	 *  chart. Do the paper work. 
-	 */
-
 	
 	
 }
