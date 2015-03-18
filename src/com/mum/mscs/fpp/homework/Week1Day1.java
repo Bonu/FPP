@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author 984417
  *
  */
-public class Day1 {
+public class Week1Day1 {
 
 	/**
 	 * @param args
@@ -22,7 +22,7 @@ public class Day1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Day 1 - Homework");
-		Day1 d1 = new Day1();
+		Week1Day1 d1 = new Week1Day1();
 //		d1.amountDetails();
 //		d1.convertSecondsToHMS();
 		d1.checkLeapYear();
