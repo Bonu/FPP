@@ -16,7 +16,7 @@ public class Day2 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Day 1 - Homework");
+		System.out.println("Day 2 - Homework");
 		
 		Day2 d2 = new Day2();
 		
@@ -152,6 +152,17 @@ public class Day2 {
 	 * Your program grades the test and displays the result. It compares each
 	 * student’s answers with the key, counts the number of correct answers, and
 	 * displays it.
+	 * 
+	 * Output: Day 2 - Homework
+	 * 
+	 * Student 0's correct count is 7
+	 * Student 1's correct count is 6 
+	 * Student 2's correct count is 5 
+	 * Student 3's correct count is 4 
+	 * Student 4's correct count is 8 
+	 * Student 5's correct count is 7 
+	 * Student 6's correct count is 7 
+	 * Student 7's correct count is 7
 	 * 
 	 */
 	public void studentGrades() {
