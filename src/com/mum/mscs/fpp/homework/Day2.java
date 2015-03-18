@@ -22,8 +22,8 @@ public class Day2 {
 		
 //		d2.weightOnPlanets();
 //		d2.compareUSMexicoPopulation();
-//		d2.rhombus();
-		d2.studentGrades();
+		d2.rhombus();
+//		d2.studentGrades();
 		
 	}
 
@@ -31,6 +31,17 @@ public class Day2 {
 	 * 1. Write a program that prompts the user to input an odd digit should be
 	 * below 10. The program should then output a rhombus of that size using the
 	 * digit.
+	 * 
+	 * output:
+	 * Enter odd number between 1 to 10:
+		5
+		     * 
+		    * * 
+		   * * * 
+		  * * * * 
+		   * * * 
+		    * * 
+		     * 
 	 */
 
 	public void rhombus() {
@@ -82,6 +93,19 @@ public class Day2 {
 	 * 4 Saturn 1.17
 	 * 5 Uranus 1.05
 	 * 6 Neptune 1.23
+	 * 
+	 * Output: 
+	 * Enter user weight:
+		100
+		Choose planet below :
+		 1. Venus 0.78 
+		 2. Mars 0.39 
+		 3. Jupiter 2.65 
+		 4. Saturn 1.17 
+		 5. Uranus 1.05 
+		 6. Neptune 1.23
+		3
+		Weight on Jupiter :265.0
 	 */
 	
 	public void weightOnPlanets() {
@@ -130,6 +154,16 @@ public class Day2 {
 	 * Write an application that displays the populations
 	 * for the two countries every year until the population of Mexico exceeds
 	 * that of the United States, and display the number of years it took.
+	 * 
+	 * Output:
+	 *  Mexico population:1.14E8 US Population:3.12E8Number of years :0.0
+		Mexico population:1.254114E8 US Population:2.95932E8Number of years :1.0
+		Mexico population:1.368228E8 US Population:2.79864E8Number of years :2.0
+		Mexico population:1.482342E8 US Population:2.63796E8Number of years :3.0
+		Mexico population:1.596456E8 US Population:2.47728E8Number of years :4.0
+		Mexico population:1.71057E8 US Population:2.3166E8Number of years :5.0
+		Mexico population:1.824684E8 US Population:2.15592E8Number of years :6.0
+		Mexico population:1.938798E8 US Population:1.99524E8Number of years :7.0
 	 */
 	
 	public void compareUSMexicoPopulation() {
