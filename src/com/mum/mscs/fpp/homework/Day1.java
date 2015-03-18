@@ -23,19 +23,35 @@ public class Day1 {
 		// TODO Auto-generated method stub
 		System.out.println("Day 1 - Homework");
 		Day1 d1 = new Day1();
-		// d1.amountDetails();
+//		d1.amountDetails();
 //		d1.convertSecondsToHMS();
+		d1.checkLeapYear();
 //		d1.uniqueUserName();
-//		d1.nextYearPopulation();
+		d1.nextYearPopulation();
 		d1.formattedDate();
 	}
 
 	/**
 	 * Print amount details
+	 * 
+	 * output:
+	 * Enter the amount :
+		11.56
+		Your amount 11.56 consists of 
+		11 :Dollars
+		2 :Quarters
+		0 :Dimes
+		1 :Nickel
+		1 :Pennie(s)
 	 */
 	public void amountDetails() {
 
-		float fnum = 11.56f;
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("Enter the amount :");
+		
+		float fnum = in.nextFloat();
+		
 		int inum = (int) fnum;
 		float decimalnum = fnum - inum;
 
@@ -51,6 +67,13 @@ public class Day1 {
 	/**
 	 * 2. Computes the number of hours, minutes, and seconds that are equivalent
 	 * to the number of seconds entered by the user.
+	 * 
+	 * output:
+	 * Enter time in seconds :
+		36254
+		Input time in seconds :36254
+		10 Hours: 4 Minutes: 14 Seconds
+	 * 
 	 */
 	public void convertSecondsToHMS() {
 
@@ -68,17 +91,20 @@ public class Day1 {
 
 	/** 
 	 * Check the given year is Leap year or not using ternary operator. 
+	 * 
+	 * output:
+	 * Enter the year in 4-digit format:
+		2015
+		The year 2015 is NOT LEAP YEAR
 	 */
 	public void checkLeapYear(){
-		Scanner getYear = new Scanner(System.in);
 
+		Scanner getYear = new Scanner(System.in);
 		System.out.println("Enter the year in 4-digit format:");
 		int year = getYear.nextInt();
-		
+		System.out.printf("The year %d is %s",year, (year % 4 ==0)? "LEAP YEAR":"NOT LEAP YEAR");
 		
 	}
-	
-	
 	
 	/**
 	 * Implement necessary string methods and random number to produce a
@@ -87,6 +113,11 @@ public class Day1 {
 	 * 
 	 * Username = First character from first name and first five characters 
 	 * from last name + three digit random number.
+	 * 
+	 * output:
+	 *  First Name: Pranab
+		Last Name: Mukherjee
+		User Name :PMukhe111
 	 */
 	public void uniqueUserName() {
 		
@@ -97,6 +128,8 @@ public class Day1 {
 		
 		int ira = ra.nextInt();
 		
+		System.out.println("First Name: "+firstName);
+		System.out.println("Last Name: "+lastName);
 		System.out.println("User Name :"+firstName.charAt(0) + lastName.substring(0,5)+Integer.toString(ira).substring(1,4));
 		
 	}
@@ -109,6 +142,12 @@ public class Day1 {
 	 * 	One new immigrant every 50 seconds 
 	 * 	Write a program to display the population of the next year. Assume the current population is 312,132,486
 	 * 	and one year has 365 days.
+	 * 
+	 * output:
+	 *  Birth Rate: 1 per 10 seconds
+		Deadth Rate: 1 per 13 seconds 
+		New Imigrant: 1 per 50 seconds
+		Next one year population : 1358530312132486
 	 */
 	public void nextYearPopulation(){
 		
@@ -117,6 +156,9 @@ public class Day1 {
 		int immigrant = (86400/50)*365;
 		int currentPopulation = 312132486;
 		
+		System.out.println("Birth Rate: 1 per 10 seconds");
+		System.out.println("Deadth Rate: 1 per 13 seconds ");
+		System.out.println("New Imigrant: 1 per 50 seconds");
 		System.out.println("Next one year population : "+ ((birthRateyear + immigrant) - deadthRate) + currentPopulation);
 	}
 	
@@ -130,7 +172,14 @@ public class Day1 {
 	 * 	c. Retrieve the date in US date format(MM/dd/yyyy) 
 	 * 	d. Retrieve the hash code for the string S
 	 * 
-	 * Note: Since the day class is deprecated, Gregorian Calendar is used in this program.
+	 * Note: Since the required methods in Day class are deprecated, 
+	 * Gregorian Calendar is used in this program.
+	 * 
+	 * output:
+	 *  Birth Rate: 1 per 10 seconds
+		Deadth Rate: 1 per 13 seconds 
+		New Imigrant: 1 per 50 seconds
+		Next one year population : 1358530312132486
 	 */
 	public void formattedDate() {
 		
