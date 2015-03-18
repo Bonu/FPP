@@ -3,6 +3,11 @@
  */
 package com.mum.mscs.fpp.homework;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -19,7 +24,10 @@ public class Day1 {
 		System.out.println("Day 1 - Homework");
 		Day1 d1 = new Day1();
 		// d1.amountDetails();
-		d1.convertSecondsToHMS();
+//		d1.convertSecondsToHMS();
+//		d1.uniqueUserName();
+//		d1.nextYearPopulation();
+		d1.formattedDate();
 	}
 
 	/**
@@ -58,7 +66,9 @@ public class Day1 {
 
 	}
 
-	/** Check the given year is Leap year or not using ternary operator. */
+	/** 
+	 * Check the given year is Leap year or not using ternary operator. 
+	 */
 	public void checkLeapYear(){
 		Scanner getYear = new Scanner(System.in);
 
@@ -75,9 +85,21 @@ public class Day1 {
 	 * username based on the user's first and last names. Assumes the last name
 	 * is at least five characters long. 
 	 * 
-	 * Username = First character from first name and first five characters from last name + three digit random
-	 * number.
+	 * Username = First character from first name and first five characters 
+	 * from last name + three digit random number.
 	 */
+	public void uniqueUserName() {
+		
+		String firstName="Pranab";
+		String lastName = "Mukherjee";
+	
+		Random ra = new Random();
+		
+		int ira = ra.nextInt();
+		
+		System.out.println("User Name :"+firstName.charAt(0) + lastName.substring(0,5)+Integer.toString(ira).substring(1,4));
+		
+	}
 
 	/**
 	 * 5. The U.S. Census Bureau projects population based on the following
@@ -88,15 +110,45 @@ public class Day1 {
 	 * 	Write a program to display the population of the next year. Assume the current population is 312,132,486
 	 * 	and one year has 365 days.
 	 */
+	public void nextYearPopulation(){
+		
+		int birthRateyear = 6*60*24*365;
+		int deadthRate = (86400/13)*365;
+		int immigrant = (86400/50)*365;
+		int currentPopulation = 312132486;
+		
+		System.out.println("Next one year population : "+ ((birthRateyear + immigrant) - deadthRate) + currentPopulation);
+	}
+	
 
 	/**
 	 * 6. Perform the following using printf(). 
 	 * Date d = new Date(); 
-	 * String s = “Hello”; 
+	 * String s = Hello; 
 	 * 	a. Retrieve weekday name(Wednesday) 
 	 * 	b. Retrieve the time is PM or AM 
-	 * 	c. Retrieve the date in US date format(mm/dd/yyyy) 
+	 * 	c. Retrieve the date in US date format(MM/dd/yyyy) 
 	 * 	d. Retrieve the hash code for the string S
+	 * 
+	 * Note: Since the day class is deprecated, Gregorian Calendar is used in this program.
 	 */
+	public void formattedDate() {
+		
+		Date date = new Date();
+		String[] day = {"Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+		String s = "Hello";
+		Calendar calendar = new GregorianCalendar();
+		
+//		calendar.setTime(date);
+		System.out.println("Week Day :"+day[calendar.get(Calendar.DAY_OF_WEEK) - 1]);
+		System.out.println("Time is PM or AM :"+ (calendar.get(Calendar.AM_PM) == 1? "PM":"AM"));
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+		sdf.setCalendar(calendar);
+		System.out.println("US Date Format :"+sdf.format(date));
+		
+		System.out.println("String \"Hello\" hash code:"+s.hashCode());
+	}
+	
+	
 
 }
