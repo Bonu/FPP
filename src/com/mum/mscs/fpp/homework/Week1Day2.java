@@ -32,16 +32,10 @@ public class Week1Day2 {
 	 * below 10. The program should then output a rhombus of that size using the
 	 * digit.
 	 * 
+	 * Odd numbers: 1 3 5 7 9
+	 * 
 	 * output:
-	 * Enter odd number between 1 to 10:
-		5
-		     * 
-		    * * 
-		   * * * 
-		  * * * * 
-		   * * * 
-		    * * 
-		     * 
+	 * 
 	 */
 
 	public void rhombus() {
@@ -51,7 +45,7 @@ public class Week1Day2 {
 		int num = input.nextInt();
 
 		if (num < 10 && (num % 2) == 1) {
-			int i, j, n = 4, n1 = 2;
+			int i, j, n = 5, n1 = 2;
 			for (i = 1; i <= 4; i++) {
 				for (int sp = 0; sp <= n; sp++) {
 					System.out.print(" ");

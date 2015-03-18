@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.mum.mscs.fpp.labpractise;
+package com.mum.mscs.fpp.labpractise.lesson2;
 
 import java.util.Scanner;
 
