@@ -166,10 +166,8 @@ public class Day2 {
 						{'B','B','A','C','C','D','E','E','A','D'},
 						{'E','B','E','C','C','D','E','E','A','D'}
 						};
-	
 		
 		char[] keysheet={'D','B','D','C','C','D','A','E','A','D'};
-		
 		
 		for (int i = 0; i < studentAnswers.length; i++) {
 			int count = 0;
@@ -181,11 +179,6 @@ public class Day2 {
 			System.out.printf("Student %d's correct count is %d\n",i,count);
 		}
 	
-	
-	
-	
 	}
-	
-
 	
 }
