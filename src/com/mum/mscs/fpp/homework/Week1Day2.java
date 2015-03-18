@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author 984417
  *
  */
-public class Day2 {
+public class Week1Day2 {
 
 	/**
 	 * @param args
@@ -18,7 +18,7 @@ public class Day2 {
 		// TODO Auto-generated method stub
 		System.out.println("Day 2 - Homework");
 		
-		Day2 d2 = new Day2();
+		Week1Day2 d2 = new Week1Day2();
 		
 //		d2.weightOnPlanets();
 //		d2.compareUSMexicoPopulation();
