@@ -23,55 +23,68 @@ public class Rhombus {
 		--***--
 		---*---
 		
-		---*
-		--***
-		-*****
+		---*         ---        *
+		--***    =   --    +   ***
+		-*****       -        *****
 		
-		--***
-		---*
+		--***    =   --    +   ***
+		---*         ---        *
+		
+	 * 
+	 * The Rhombus 
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int num = 5;
-		int refVal = (num/2)+1;
-		int refVal1 = refVal;
-		int refVal2 = 1;
-		int val1 = 1;
-		System.out.println(num);
-		System.out.println(refVal);
-		
-		for(int a=1;a<=refVal;a++) {
-			for(int i=1; i<= refVal1; i++){
-				System.out.printf(" ");
-			}
-			refVal1--;
-			
-			for(int j=1;j<=val1;j++){
-				System.out.printf("*");
-			}
-			val1 = val1 + 2;
-			System.out.println(" ");
-		}
-		
-		num = num - 2;
-		refVal = (num/2)+1;
-		refVal1 = refVal;
-		refVal2 = 1;
-		val1 = 1;
 	
-		for(int a=1;a<=refVal;a++) {
-			for(int i=1; i<= refVal1; i++){
-				System.out.printf(" ");
-			}
-			refVal1--;
-			for(int j=1;j<=val1;j++){
-				System.out.printf("*");
-			}
-			val1 = val1 + 2;
-			System.out.println(" ");
-		}
+	public void displayRhombus(int num){
+		// TODO Auto-generated method stub
+//				int refVal = (num/2)+1;
+//				int refVal1 = refVal;
+//				int refVal2 = 1;
+//				int val1 = 1;
+//				System.out.println(num);
+////				System.out.println(refVal);
+//				
+//				for(int a=1;a<=refVal;a++) {
+//					for(int i=1; i<= refVal1; i++){
+//						System.out.printf(" ");
+//					}
+//					refVal1--;
+//					
+//					for(int j=1;j<=val1;j++){
+//						System.out.printf("*");
+//					}
+//					val1 = val1 + 2;
+//					System.out.println(" ");
+//				}
+				
+				num = num - 2;
+				int refVal = (num/2)+1;
+				int refVal1 = refVal;
+				int refVal2 = 1;
+				int val1 = num;
+				
+				for(int a=1;a<=refVal;a++) {
+//					System.out.printf("Loop %d\n",a);
+					for(int i=1; i<= refVal1; i++){
+						System.out.printf("%d",a);
+					}
+					refVal1++;
+					for(int j=1;j<=val1;j++){
+						System.out.printf("*");
+					}
+					val1 = val1  - 2;
+					System.out.println(" ");
+				}
+				
+	}
+	public static void main(String[] args) {
 		
+		Rhombus rhbs1 = new Rhombus();
+		rhbs1.displayRhombus(1);
+		rhbs1.displayRhombus(3);
+		rhbs1.displayRhombus(5);
+		rhbs1.displayRhombus(7);
+		rhbs1.displayRhombus(9);
 	}
 	
 }
