@@ -34,14 +34,7 @@ public class Week1Day2 {
 	 * 
 	 * output:
 	 * Enter odd number between 1 to 10:
-		5
-		     * 
-		    * * 
-		   * * * 
-		  * * * * 
-		   * * * 
-		    * * 
-		     * 
+		
 	 */
 
 	public void rhombus() {
@@ -50,7 +43,7 @@ public class Week1Day2 {
 		System.out.println("Enter odd number between 1 to 10:");
 		int num = input.nextInt();
 
-//		if (num < 10 && (num % 2) == 1) {
+		if (num < 10 && (num % 2) == 1) {
 //			int i, j, n = 4, n1 = 2;
 //			for (i = 1; i <= 4; i++) {
 //				for (int sp = 0; sp <= n; sp++) {
@@ -74,9 +67,9 @@ public class Week1Day2 {
 //				n1++;
 //				System.out.print("\n");
 //			}
-//		} else {
+		} else {
 //			System.out.println("Not a valid odd number between 1 to 10");
-//		}
+		}
 	}
 
 	/**

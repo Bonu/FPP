@@ -59,9 +59,7 @@ public class Rhombus {
 		refVal1 = refVal;
 		refVal2 = 1;
 		val1 = 1;
-		System.out.println(num);
-		System.out.println(refVal);
-		
+	
 		for(int a=1;a<=refVal;a++) {
 			for(int i=1; i<= refVal1; i++){
 				System.out.printf(" ");
@@ -74,11 +72,6 @@ public class Rhombus {
 			System.out.println(" ");
 		}
 		
-
-		
-		
 	}
 	
-	
-
 }
