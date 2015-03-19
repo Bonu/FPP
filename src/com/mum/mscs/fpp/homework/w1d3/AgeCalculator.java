@@ -32,11 +32,11 @@ public class AgeCalculator {
 	private Calendar now = new GregorianCalendar();
 
 	public Date[] dates = {
-			extractDate(03,12,1980),
-			extractDate(04,11,1950),
-			extractDate(05,10,1967),
-			extractDate(06,11,1978),
-			extractDate(07,17,1989),
+			extractDate(3,12,1980),
+			extractDate(4,11,1950),
+			extractDate(5,10,1967),
+			extractDate(6,11,1978),
+			extractDate(7,17,1989),
 			extractDate(8,16,1990),
 			extractDate(9,25,1998),
 			extractDate(10,21,1987),
@@ -60,8 +60,6 @@ public class AgeCalculator {
 			int age = now.get(Calendar.YEAR) - bDate.get(Calendar.YEAR);
 			System.out.println("Date :"+date+"\t Age :"+age);
 		}
-		
-		
 	}
 	
 	public Date extractDate(int month, int day, int year) {
@@ -70,14 +68,6 @@ public class AgeCalculator {
 		cal.set(year, month, day);
 		return cal.getTime();
 	}
-	
-	
-	
-	public void calculateAge(){
-		
-	}
-	
-	
 	
 
 }
