@@ -4,6 +4,11 @@
 package com.mum.mscs.fpp.labpractise.lesson3;
 
 /**
+ * 
+ * 1.	Create class called DefaultValue. Declare the data members for 
+ * all primitive types. Write a method to display the default value of 
+ * all the primitive type.
+ * 
  * @author 984417
  *
  */

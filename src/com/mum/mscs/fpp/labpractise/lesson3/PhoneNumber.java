@@ -4,6 +4,13 @@
 package com.mum.mscs.fpp.labpractise.lesson3;
 
 /**
+ * 2.	Create a PhoneNumber class and test it. The instance variables are
+ *  first name, last name and phone number. The application specific method
+ *   getContact() should returns a String of the form: “last name, first name,
+ *    phone number”. 
+ *    
+ *    For example: “Cox, Sarah, 213 290 6424”
+ *    
  * @author 984417
  *
  */
