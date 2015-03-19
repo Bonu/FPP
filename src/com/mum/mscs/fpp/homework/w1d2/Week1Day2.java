@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.mum.mscs.fpp.homework;
+package com.mum.mscs.fpp.homework.w1d2;
 
 import java.util.Scanner;
 

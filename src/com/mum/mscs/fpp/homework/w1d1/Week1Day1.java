@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.mum.mscs.fpp.homework;
+package com.mum.mscs.fpp.homework.w1d1;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
