@@ -16,9 +16,12 @@ package com.mum.mscs.fpp.homework.w1d3;
 		Invalid credit/debit amount
 		
 		output:
-		Invalid Debit amount
-		Balance Amount:0.0
-		Balance Amount:100.0
+		Amount Debited
+		Balance Amount: 21000.00
+		Invalid Credit amount, Transaction Rejected
+		Balance Amount: 1000.00
+		Invalid Credit amount, Transaction Rejected
+		Balance Amount: 1000.00
 		
 		@author janardhanbonu
  */
@@ -36,25 +39,26 @@ package com.mum.mscs.fpp.homework.w1d3;
 	}
 	
 	public short credit(double amount){
-		this.balance = this.balance - amount;
-		return checkBalance("Credit");
+		return checkBalance("Credit", amount);
 	}
 	
 	public short debit(double amount) {
-		this.balance = this.balance + amount;
-		return checkBalance("Debit");
+		return checkBalance("Debit", amount);
 	}
 	
-	public short checkBalance(String transactionType){
+	public short checkBalance(String transactionType, double amount){
 		
-		if(balance < 0){
-			System.out.printf("Invalid %s amount\n", transactionType);
+		double bal = transactionType.equals("Credit")? (this.balance - amount):(this.balance + amount);
+		
+		if(bal < 0){
+			System.out.printf("Invalid %s amount, Transaction Rejected\n", transactionType);
 			return -1;
-		} else if (balance ==0){
-			System.out.printf("Invalid %s amount\n", transactionType);
+		} else if (bal ==0){
+			System.out.printf("Invalid %s amount, Transaction Rejected\n", transactionType);
 			return 0;
 		} else {
 			System.out.printf("Amount %sed\n", transactionType);
+			this.balance = bal;
 			return 1;
 		}
 	}
@@ -72,6 +76,10 @@ package com.mum.mscs.fpp.homework.w1d3;
 		Account acnt2 = new Account(1000);
 		acnt2.credit(1000);
 		acnt2.getBalance();
+		
+		Account acnt3 = new Account(1000);
+		acnt3.credit(2000);
+		acnt3.getBalance();
 		
 	}
 	
