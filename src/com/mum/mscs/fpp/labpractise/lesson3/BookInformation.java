@@ -88,8 +88,8 @@ public class BookInformation {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BookInformation bi = new BookInformation("Rama",007,"Ramayana", "Valmiki",(new Date()),true);
-		BookInformation bi = new BookInformation("Ravana",007,"Ramayana", "Valmiki",(new Date()),true);
+		BookInformation bi1 = new BookInformation("Rama",007,"Ramayana", "Valmiki",(new Date()),true);
+		BookInformation bi2 = new BookInformation("Ravana",007,"Ramayana", "Valmiki",(new Date()),true);
 	}
 
 }
