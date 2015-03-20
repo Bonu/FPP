@@ -1,0 +1,405 @@
+/**
+ * Account.java
+ */
+package com.mum.mscs.fpp.homework.w1d3;
+
+/**
+ * 1.	Implement the Java code for the given class diagram.
+		Account
+		+balance : double
+		+double : getBalance()
+		+int credit(amount)
+		+int debit(amount) 
+		
+		In the above class diagram the methods credit() and debit() return -1 
+		for the negative or zero input and also display the information as 
+		Invalid credit/debit amount
+		
+		output:
+		Amount Debited
+		Balance Amount: 21000.00
+		Invalid Credit amount, Transaction Rejected
+		Balance Amount: 1000.00
+		Invalid Credit amount, Transaction Rejected
+		Balance Amount: 1000.00
+		
+		@author janardhanbonu
+ */
+ public class Account {
+	
+	public Account(double balance){
+		this.balance = balance;
+	}
+	
+	public double balance;
+	
+	public double getBalance(){
+		System.out.printf("Balance Amount: %.2f\n",balance);
+		return balance;
+	}
+	
+	public short credit(double amount){
+		return checkBalance("Credit", amount);
+	}
+	
+	public short debit(double amount) {
+		return checkBalance("Debit", amount);
+	}
+	
+	public short checkBalance(String transactionType, double amount){
+		
+		double bal = transactionType.equals("Credit")? (this.balance - amount):(this.balance + amount);
+		
+		if(bal < 0){
+			System.out.printf("Invalid %s amount, Transaction Rejected\n", transactionType);
+			return -1;
+		} else if (bal ==0){
+			System.out.printf("Invalid %s amount, Transaction Rejected\n", transactionType);
+			return 0;
+		} else {
+			System.out.printf("Amount %sed\n", transactionType);
+			this.balance = bal;
+			return 1;
+		}
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Account acnt1 = new Account(20000);
+		acnt1.debit(1000);
+		acnt1.getBalance();
+		
+		Account acnt2 = new Account(1000);
+		acnt2.credit(1000);
+		acnt2.getBalance();
+		
+		Account acnt3 = new Account(1000);
+		acnt3.credit(2000);
+		acnt3.getBalance();
+		
+	}
+	
+	
+}
+/**
+ * DigitalCamera.java
+ */
+package com.mum.mscs.fpp.homework.w1d3;
+
+/**
+ *
+ * 
+ * 2.a	Create a class for EBay’s Camera Store, which is having a digital camera sale. 
+ * The class is named as DigitalCamera, and it contains data fields for a brand, the 
+ * number of megapixels in the resolution, and price. Include a constructor that takes 
+ * arguments for the brand and megapixels. If the megapixel parameter is greater than 10, 
+ * the constructor sets it to 10. The sale price is set based on the resolution; any 
+ * camera with 6 megapixels or fewer is $99, and all other cameras are $129. Also include 
+ * a method that displays DigitalCamera details. 
+ * 
+ * This class is tested in TestDigitalCamera.java
+ * 
+ */
+public class DigitalCamera {
+
+	 private String brand;
+	 private int resolution;
+	 private int price;
+	
+	public DigitalCamera(String brand, int resolution) {
+		super();
+		this.brand = brand;
+		this.resolution = resolution;
+		if(resolution > 10){
+			setResolution(10);
+			setPrice(129);
+		} else if( resolution > 6){
+			setPrice(129);
+		} else {
+			setPrice(99);
+		}
+	}
+	
+	public void dispalyCameraDetails() {
+		System.out.printf("Brand : %s \t Resolution : %d \tPrice : %d \n", brand, resolution, price);
+	}
+	
+	@Override
+	public String toString() {
+		return "DigitalCamera [Brand =" + getBrand() + ", Resolution ="
+				+ getResolution() + ", Price=" + getPrice() + "]";
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public int getResolution() {
+		return resolution;
+	}
+	public void setResolution(int resolution) {
+		this.resolution = resolution;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	 
+}
+
+
+/**
+ * TestDigitalCamera.java
+ */
+package com.mum.mscs.fpp.homework.w1d3;
+
+/**
+ * 
+ * 2.b Write an application named TestDigitalCamera 
+ * in which you instantiate at least four objects, prompt the user for values for the 
+ * camera brand and number of megapixels, and display all the values.
+ * 
+ * output:
+ *  Brand : Canon 	 Resolution : 10 	Price : 129 
+	Brand : Nikon 	 Resolution : 10 	Price : 129 
+	Brand : Olympus 	 Resolution : 6 	Price : 99 
+	Brand : Sony 	 Resolution : 4 	Price : 99 
+ * 
+ * @author janardhanbonu
+ *
+ */
+public class TestDigitalCamera {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		DigitalCamera dc1 = new DigitalCamera("Canon", 24);
+		dc1.dispalyCameraDetails();
+		
+		DigitalCamera dc2 = new DigitalCamera("Nikon", 12);
+		dc2.dispalyCameraDetails();
+		
+		DigitalCamera dc3 = new DigitalCamera("Olympus", 6);
+		dc3.dispalyCameraDetails();
+		
+		DigitalCamera dc4 = new DigitalCamera("Sony", 4);
+		dc4.dispalyCameraDetails();
+		
+	}
+
+}
+/**
+ *  LoanCalculator.java 
+ */
+package com.mum.mscs.fpp.homework.w1d3;
+
+/**
+ * 
+ * 3.   Develop a LoanCalculator class, which perform the following.
+		a.	Instance variables are loan_amount, interest_rate, loan_period.
+		b.	Implement a method to calculate MothlyPayment 
+		c.	Implement a method to calculate YearlyPayment.
+		d.	Create an array of 4 objects for this class.
+		e.	Display the output as follows. (Payment upto 2 decimals)
+
+         Loan	          Annual	       Loan Period           Monthly		        Total
+         Amount	     Interest Rate      (years)              Interest              Interest                         
+
+         Apply simple interest formula, Interest = (loan_amount *  loan_period * interest_rate)/100
+         
+    output:
+		        Loan 	Annual 	LoanPeriod 	Monthly 	Yearly
+			50000	 5.00	 4		     833.33		 10000.00
+			Loan 	Annual 	LoanPeriod 	Monthly 	Yearly
+			10000	 2.15	 6		     107.50		 1290.00
+			Loan 	Annual 	LoanPeriod 	Monthly 	Yearly
+			28000	 15.00	 1		     350.00		 4200.00
+			Loan 	Annual 	LoanPeriod 	Monthly 	Yearly
+			100000	 1.50	 2		 2   50.00		 3000.00
+         
+*/
+public class LoanCalculator {
+	
+	private int loan_amount;
+	private float interest_rate;
+	private int loan_period;
+	private float total_amount;
+	
+	public LoanCalculator(int loan_amount, float interest_rate,
+			int loan_period) {
+		super();
+		this.loan_amount = loan_amount;
+		this.interest_rate = interest_rate;
+		this.loan_period = loan_period;
+	}
+	
+	public float monthlyInterest() {
+		return ((loan_amount * interest_rate * loan_period)/(12*100));
+	}
+	
+	public float yearlyInterest() {
+		return (loan_amount * interest_rate * loan_period)/100;
+	}
+	
+	public void displayDetails() {
+		System.out.printf("Loan \tAnnual \tLoanPeriod \tMonthly \tYearly\n");
+		System.out.printf("%d\t %.2f\t %d\t\t %.2f\t\t %.2f\n",loan_amount,interest_rate,loan_period,monthlyInterest(),yearlyInterest());
+	}
+	
+	public static void main(String[] args) {
+		LoanCalculator[] lc = new LoanCalculator[4];
+		lc[0] = new LoanCalculator(50000,5.00f,4);
+		lc[0].displayDetails();
+		lc[1] = new LoanCalculator(10000,2.15f,6);
+		lc[1].displayDetails();
+		lc[2] = new LoanCalculator(28000,15.00f,1);
+		lc[2].displayDetails();
+		lc[3] = new LoanCalculator(100000,1.50f,2);
+		lc[3].displayDetails();
+	}
+	
+	public float getLoan_amount() {
+		return loan_amount;
+	}
+	public void setLoan_amount(int loan_amount) {
+		this.loan_amount = loan_amount;
+	}
+	public float getInterest_rate() {
+		return interest_rate;
+	}
+	public void setInterest_rate(float interest_rate) {
+		this.interest_rate = interest_rate;
+	}
+	public int getLoan_period() {
+		return loan_period;
+	}
+	public void setLoan_period(int loan_period) {
+		this.loan_period = loan_period;
+	}
+	public float getTotal_amount() {
+		return total_amount;
+	}
+	public void setTotal_amount(float total_amount) {
+		this.total_amount = total_amount;
+	}
+	
+	
+
+}/**
+ * 
+ */
+package com.mum.mscs.fpp.homework.w1d3;
+
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+/**
+ * AgeCalclator.java
+ * 
+ * 4. Create an array which stores the person’s date of birth and perform the following operations on the array.
+		a. Calculate the age of a person and display their age.
+		b. Sort the birth dates. 
+		
+  output:
+  
+  	Date :Sat Apr 12 17:53:40 CST 1980	 Age :35
+	Date :Thu May 11 17:53:40 CDT 1950	 Age :65
+	Date :Sat Jun 10 17:53:40 CDT 1967	 Age :48
+	Date :Tue Jul 11 17:53:40 CDT 1978	 Age :37
+	Date :Thu Aug 17 17:53:40 CDT 1989	 Age :26
+	Date :Sun Sep 16 17:53:40 CDT 1990	 Age :25
+	Date :Sun Oct 25 17:53:40 CST 1998	 Age :17
+	Date :Sat Nov 21 17:53:40 CST 1987	 Age :28
+	Date :Wed Dec 22 17:53:40 CST 1976	 Age :39
+	Date :Sun Jan 23 17:53:40 CST 1966	 Age :49
+	
+	---- dates are sorted-----
+	
+	Date :Thu May 11 17:53:40 CDT 1950
+	Date :Sun Jan 23 17:53:40 CST 1966
+	Date :Sat Jun 10 17:53:40 CDT 1967
+	Date :Wed Dec 22 17:53:40 CST 1976
+	Date :Tue Jul 11 17:53:40 CDT 1978
+	Date :Sat Apr 12 17:53:40 CST 1980
+	Date :Sat Nov 21 17:53:40 CST 1987
+	Date :Thu Aug 17 17:53:40 CDT 1989
+	Date :Sun Sep 16 17:53:40 CDT 1990
+	Date :Sun Oct 25 17:53:40 CST 1998
+	
+		        
+ * @author janardhanbonu
+ *
+ */
+public class AgeCalculator {
+	
+	private Calendar now = new GregorianCalendar();
+
+	public Date[] dates = {
+			extractDate(3,12,1980),
+			extractDate(4,11,1950),
+			extractDate(5,10,1967),
+			extractDate(6,11,1978),
+			extractDate(7,17,1989),
+			extractDate(8,16,1990),
+			extractDate(9,25,1998),
+			extractDate(10,21,1987),
+			extractDate(11,22,1976),
+			extractDate(12,23,1965)
+	};
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		AgeCalculator ac = new AgeCalculator();
+		ac.displayAge();
+		ac.sortDates();
+		ac.displayDates();
+	}
+	
+	
+	public void displayAge(){
+		Calendar bDate = new GregorianCalendar();
+		for (Date date : dates) {
+			bDate.setTime(date);
+			/* 
+			 * To keep it simple only the years difference is calculated
+			 * instead of calculating in time 
+			 */
+			int age = now.get(Calendar.YEAR) - bDate.get(Calendar.YEAR);
+			System.out.println("Date :"+date+"\t Age :"+age);
+		}
+	}
+	
+	public Date extractDate(int month, int day, int year) {
+		
+		GregorianCalendar cal = new GregorianCalendar();
+		cal.set(year, month, day);
+		return cal.getTime();
+	}
+	
+	public void sortDates() {
+		Arrays.sort(dates);
+		System.out.println("\n---- dates are sorted-----\n");
+	}
+	
+	private void displayDates() {
+		for (Date date : dates) {
+			System.out.println("Date :"+date.toString());
+		}
+	}
+	
+
+}
