@@ -1,9 +1,10 @@
 /**
- * 
+ * TestDigitalCamera.java
  */
 package com.mum.mscs.fpp.homework.w1d3;
 
 /**
+ * 
  * 2.b Write an application named TestDigitalCamera 
  * in which you instantiate at least four objects, prompt the user for values for the 
  * camera brand and number of megapixels, and display all the values.

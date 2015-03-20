@@ -1,5 +1,5 @@
 /**
- * 
+ * AgeCalclator.java
  */
 package com.mum.mscs.fpp.homework.w1d3;
 
@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
+ * 
  * 4. Create an array which stores the person’s date of birth and perform the following operations on the array.
 		a. Calculate the age of a person and display their age.
 		b. Sort the birth dates. 

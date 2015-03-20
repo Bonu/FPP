@@ -1,6 +1,10 @@
+/**
+ *  LoanCalculator.java 
+ */
 package com.mum.mscs.fpp.homework.w1d3;
 
 /**
+ * 
  * 3.   Develop a LoanCalculator class, which perform the following.
 		a.	Instance variables are loan_amount, interest_rate, loan_period.
 		b.	Implement a method to calculate MothlyPayment 
