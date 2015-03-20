@@ -31,11 +31,61 @@ public class Week1Day2 {
 	 * 1. Write a program that prompts the user to input an odd digit should be
 	 * below 10. The program should then output a rhombus of that size using the
 	 * digit.
+	 * 	---*---
+		--***--
+		-*****-
+		--***--
+		---*---
+		
+		---*         ---        *
+		--***    =   --    +   ***
+		-*****       -        *****
+		
+		--***    =   --    +   ***
+		---*         ---        *
+		
+	 * 
 	 * 
 	 * output:
 	 * Enter odd number between 1 to 10:
-		
+	 * 
+	
+	 * Output: 
+		1
+		 * 
+		3
+		  * 
+		 *** 
+		  * 
+		5
+		   * 
+		  *** 
+		 ***** 
+		  *** 
+		   * 
+		7
+		    * 
+		   *** 
+		  ***** 
+		 ******* 
+		  ***** 
+		   *** 
+		    * 
+		9
+		     * 
+		    *** 
+		   ***** 
+		  ******* 
+		 ********* 
+		  ******* 
+		   ***** 
+		    *** 
+		     * 
+
+	 * The Rhombus 
+	 * @param args
 	 */
+	
 
 	public void rhombus() {
 
@@ -44,31 +94,53 @@ public class Week1Day2 {
 		int num = input.nextInt();
 
 		if (num < 10 && (num % 2) == 1) {
-//			int i, j, n = 4, n1 = 2;
-//			for (i = 1; i <= 4; i++) {
-//				for (int sp = 0; sp <= n; sp++) {
-//					System.out.print(" ");
-//				}
-//				for (j = 1; j <= i; j++) {
-//					System.out.print("* ");
-//				}
-//				n--;
-//				System.out.print("\n");
-//			}
-//
-//			for (i = 3; i >= 1; i--) {
-//				for (int sp = 0; sp <= n1; sp++) {
-//					System.out.print(" ");
-//				}
-//
-//				for (j = i; j >= 1; j--) {
-//					System.out.print("* ");
-//				}
-//				n1++;
-//				System.out.print("\n");
-//			}
+			int refVal = (num/2)+1;
+			int refVal1 = refVal;
+			int val1 = 1;
+			System.out.println(num);
+			
+			
+			/*  The Rhombus diagram has 2 basic triangles and each has 2 triangles again.
+			 *  The upper triangle is made up of spaces and '*' symbols in a defined order
+			 *  of odd number. A traingle with empty space is created first by taking the 
+			 *  middle line of the triangle as reference point and decrease the number of 
+			 *  spaces one by one for the next lines.
+			 *  In the same iteration create a loop to print * and add more * for next line 
+			 *  in odd number sequence.
+			 *  
+			 *  the lower triangle is made of space and '*' symbols in a decreasing order 
+			 *  compare to the upper triangle.
+			 */
+			for(int a=1;a<=refVal;a++) {
+				for(int i=1; i<= refVal1; i++){
+					System.out.printf(" ");
+				}
+				refVal1--;
+				
+				for(int j=1;j<=val1;j++){
+					System.out.printf("*");
+				}
+				val1 = val1 + 2;
+				System.out.println(" ");
+			}
+			
+			num = num - 2;
+			refVal1 = 1;
+			val1 = num;
+			
+			for(int a=1;a<=refVal-1;a++) {
+				for(int i=1; i<=refVal1+1; i++){
+					System.out.printf(" ");
+				}
+				refVal1++;
+				for(int j=1;j<=val1;j++){
+					System.out.printf("*");
+				}
+				val1 = val1  - 2;
+				System.out.println(" ");
+			}
 		} else {
-//			System.out.println("Not a valid odd number between 1 to 10");
+			System.out.println("Not a valid odd number between 1 to 10");
 		}
 	}
 
