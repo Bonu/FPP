@@ -25,10 +25,10 @@ public class Week1Day1 {
 		Week1Day1 d1 = new Week1Day1();
 //		d1.amountDetails();
 //		d1.convertSecondsToHMS();
-		d1.checkLeapYear();
+//		d1.checkLeapYear();
 //		d1.uniqueUserName();
 		d1.nextYearPopulation();
-		d1.formattedDate();
+//		d1.formattedDate();
 	}
 
 	/**
@@ -145,13 +145,13 @@ public class Week1Day1 {
 	 * 
 	 * output:
 	 *  Birth Rate: 1 per 10 seconds
-		Deadth Rate: 1 per 13 seconds 
-		New Imigrant: 1 per 50 seconds
+		Death Rate: 1 per 13 seconds 
+		New Immigrant: 1 per 50 seconds
 		Next one year population : 1358530312132486
 	 */
 	public void nextYearPopulation(){
 		
-		int birthRateyear = 6*60*24*365;
+		int birthRateyear = (86400/6)*365;
 		int deadthRate = (86400/13)*365;
 		int immigrant = (86400/50)*365;
 		int currentPopulation = 312132486;
@@ -159,7 +159,7 @@ public class Week1Day1 {
 		System.out.println("Birth Rate: 1 per 10 seconds");
 		System.out.println("Deadth Rate: 1 per 13 seconds ");
 		System.out.println("New Imigrant: 1 per 50 seconds");
-		System.out.println("Next one year population : "+ ((birthRateyear + immigrant) - deadthRate) + currentPopulation);
+		System.out.println("Next one year population : "+ (((birthRateyear + immigrant) - deadthRate) + currentPopulation));
 	}
 	
 
