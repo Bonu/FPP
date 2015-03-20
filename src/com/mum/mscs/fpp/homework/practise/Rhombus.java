@@ -78,7 +78,8 @@ public class Rhombus {
 		 *  The upper triangle is made up of spaces and '*' symbols in a defined order
 		 *  of odd number. A traingle with empty space is created first by taking the 
 		 *  middle line of the triangle as reference point and decrease the number of 
-		 *  spaces one by one for the next lines.
+		 *  spaces one by one for the next lines and * are added after the spaces 
+		 *  incremented by 2 for next line.
 		 *  In the same iteration create a loop to print * and add more * for next line 
 		 *  in odd number sequence.
 		 *  
