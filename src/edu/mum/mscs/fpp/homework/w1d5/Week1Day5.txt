@@ -11,11 +11,13 @@ package edu.mum.mscs.fpp.homework.w1d5;
  * Decimal : 25 Binary : 11001
  * Decimal : 4  Binary : 100
  * 
- * @author janardhanbonu
  *
  */
 public class DecimalToBinaryRecursive {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		DecimalToBinaryRecursive dbr = new DecimalToBinaryRecursive();
 		System.out.printf("Decimal : 25  Binary : ");
@@ -51,7 +53,6 @@ package edu.mum.mscs.fpp.homework.w1d5;
 	String rar    is Palindrome
 	String maam   is Palindrome
  * 
- * @author janardhanbonu
  *
  */
 public class Palindrome {

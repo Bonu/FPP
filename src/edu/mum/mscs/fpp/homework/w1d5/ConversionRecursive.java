@@ -1,11 +1,16 @@
 /**
- * 
+ * ConversionRecursive
  */
 package edu.mum.mscs.fpp.homework.w1d5;
 
 /**
- *
- */
+ *6.	Convert the digit input into words using recursion.
+		Example :  Input : 562
+		                   Output : Five Six Two
+		output: 
+		THREE FOUR FIVE SIX 
+		
+		 */
 
 public class ConversionRecursive {
 
@@ -20,7 +25,7 @@ public class ConversionRecursive {
 	public void convert(int number){
 		if(number > 0){
 			convert(number/10);
-			System.out.println(numbers[(number%10)]);
+			System.out.printf("%s ",numbers[(number%10)]);
 		}
 	}
 
