@@ -2,7 +2,7 @@ package edu.mum.mscs.fpp.homework.w1d4;
 
 /**
  * 
- * Complete the given skeleton and Implement main class to perform the operations for PersonArrayOpe class.
+ * 1. Complete the given skeleton and Implement main class to perform the operations for PersonArrayOpe class.
  * 
  * output:
  * 
