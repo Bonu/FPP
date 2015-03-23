@@ -1,27 +1,42 @@
 /**
- * 
+ * DecimalToBinary.java
  */
 package edu.mum.mscs.fpp.homework.w1d5;
 
 /**
+ * 1. Convert Decimal To Binary Recursively
+ * 
+ * Output:
+ * Decimal : 25 Binary : 11001
+ * Decimal : 4  Binary : 100
+ * 
  * @author janardhanbonu
  *
  */
 public class DecimalToBinaryRecursive {
 
-	/**
-	 * 
-	 */
-	public DecimalToBinaryRecursive() {
-		// TODO Auto-generated constructor stub
-	}
-
+	public String binary="";
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		DecimalToBinaryRecursive dbr = new DecimalToBinaryRecursive();
+		dbr.convert(25);
+		System.out.println("Decimal : 25"+" Binary : "+dbr.binary);
+		dbr.convert(4);
+		System.out.println("Decimal : 4 "+" Binary : "+dbr.binary);
 	}
-
+	
+	public String convert(int number){
+		binary="";
+		decimaltobinary(number);
+		return binary;
+	}
+	
+	public  void decimaltobinary(int number){
+		if(number > 0){
+			binary = (number%2) + binary;
+			decimaltobinary(number/2);
+		}
+	}
 }
