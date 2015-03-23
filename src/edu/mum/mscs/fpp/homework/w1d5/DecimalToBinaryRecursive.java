@@ -1,10 +1,11 @@
 /**
- * DecimalToBinary.java
+ * DecimalToBinaryRecursive.java
  */
 package edu.mum.mscs.fpp.homework.w1d5;
 
 /**
  * 1. Convert Decimal To Binary Recursively
+ * Example: 25 - 11001
  * 
  * Output:
  * Decimal : 25 Binary : 11001
