@@ -10,6 +10,13 @@ package edu.mum.mscs.fpp.homework.w1d4;
  * Write a method to display the employee information. Find which employee 
  * is getting high salary.
  * 
+ * output:
+ * 		Employee [lastName=Singh, firstName=Mreenal, address=Amritsar, salary=9000, empId=1003]
+		Employee [lastName=Maria, firstName=Rita, address=London, salary=22000, empId=1004]
+		
+		Highest Salary Employee is:
+		Employee [lastName=Maria, firstName=Rita, address=London, salary=22000, empId=1004]
+ * 
  * @author janardhanbonu
  *
  */
@@ -27,11 +34,22 @@ public class EmployeeInformation {
 		emps[4] = new Employee("Maria", "Rita", "London", 22000);
 		emps[4].displayEmp();
 		
+		highestSalaryEmp(emps);
+		
 	}
 	
-	public Employee highestSalaryEmp(Employee[] emps){
-		//TODO - find highest value in the array using recursion
-		return null;
+	public static Employee highestSalaryEmp(Employee[] emps){
+		int largest=0;
+		int index = 0;
+		
+		for (int i = 0; i < emps.length; i++) {
+			if(largest < emps[i].getSalary()){
+				largest = emps[i].getSalary();
+				index = i;
+			}
+		}
+		System.out.println("Highest Salary Employee is:\n"+emps[index].toString());
+		return emps[index];
 	}
 	
 }
@@ -72,4 +90,9 @@ class Employee {
 				+ empId + "]";
 	}
 
+	public int getSalary() {
+		return salary;
+	}
+
+	
 }
