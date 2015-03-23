@@ -6,6 +6,11 @@ package edu.mum.mscs.fpp.homework.w1d5;
 /**
  * Perform binary search using recursive method
  * 
+ * output: 
+ * 	Found 35 at 4 index
+	Found 80 at 5 index
+	Found 15 at 3 index
+
  * @author janardhanbonu
  *
  */
