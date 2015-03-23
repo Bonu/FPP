@@ -4,24 +4,28 @@
 package edu.mum.mscs.fpp.homework.w1d5;
 
 /**
- * @author janardhanbonu
- *
  */
 public class Anagramming {
 
-	/**
-	 * 
-	 */
-	public Anagramming() {
-		// TODO Auto-generated constructor stub
+	public void anagram(String s) {
+		anagram("", s);
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	private void anagram(String prefix, String s) {
+		int N = s.length();
+		if (N == 0)
+			System.out.println(prefix);
+		else {
+			for (int i = 0; i < N; i++)
+				anagram(prefix + s.charAt(i),
+						s.substring(0, i) + s.substring(i + 1, N));
+		}
 
+	}
+
+	public void main(String[] args) {
+		Anagramming a = new Anagramming();
+		a.anagram("abc");
 	}
 
 }

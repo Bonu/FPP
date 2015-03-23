@@ -16,7 +16,6 @@ package edu.mum.mscs.fpp.homework.w1d5;
 	String rar    is Palindrome
 	String maam   is Palindrome
  * 
- * @author janardhanbonu
  *
  */
 public class Palindrome {
