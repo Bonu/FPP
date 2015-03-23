@@ -4,7 +4,7 @@
 package edu.mum.mscs.fpp.homework.w1d5;
 
 /**
- * Check whether the given string is palindrome or not
+ * 2. Check whether the given string is palindrome or not
  * 
  * Example: madam - Palindrome
  * 			jackson - Not Palindrome

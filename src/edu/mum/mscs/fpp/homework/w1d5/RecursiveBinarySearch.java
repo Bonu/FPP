@@ -4,7 +4,7 @@
 package edu.mum.mscs.fpp.homework.w1d5;
 
 /**
- * Perform binary search using recursive method
+ * 3. Perform binary search using recursive method
  * 
  * output: 
  * 	Found 35 at 4 index

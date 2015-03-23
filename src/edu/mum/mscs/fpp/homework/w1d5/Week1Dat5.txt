@@ -1,0 +1,192 @@
+/**
+ * DecimalToBinaryRecursive.java
+ */
+package edu.mum.mscs.fpp.homework.w1d5;
+
+/**
+ * 1. Convert Decimal To Binary Recursively
+ * Example: 25 - 11001
+ * 
+ * Output:
+ * Decimal : 25 Binary : 11001
+ * Decimal : 4  Binary : 100
+ * 
+ * @author janardhanbonu
+ *
+ */
+public class DecimalToBinaryRecursive {
+
+	public String binary="";
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		DecimalToBinaryRecursive dbr = new DecimalToBinaryRecursive();
+		dbr.convert(25);
+		System.out.println("Decimal : 25"+" Binary : "+dbr.binary);
+		dbr.convert(4);
+		System.out.println("Decimal : 4 "+" Binary : "+dbr.binary);
+	}
+	
+	public String convert(int number){
+		binary="";
+		decimaltobinary(number);
+		return binary;
+	}
+	
+	public  void decimaltobinary(int number){
+		if(number > 0){
+			binary = (number%2) + binary;
+			decimaltobinary(number/2);
+		}
+	}
+}
+/**
+ * Palindrome.java
+ */
+package edu.mum.mscs.fpp.homework.w1d5;
+
+/**
+ * 2. Check whether the given string is palindrome or not
+ * 
+ * Example: madam - Palindrome
+ * 			jackson - Not Palindrome
+ * 
+ * Output:
+ *  String Sahara is Not Palindrome
+	String madam  is Palindrome
+	String Madam  is Not Palindrome
+	String rar    is Palindrome
+	String maam   is Palindrome
+ * 
+ * @author janardhanbonu
+ *
+ */
+public class Palindrome {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Palindrome pal= new Palindrome();
+		System.out.printf("String Sahara is %s\n",pal.isPalindrome("sahara")?"Palindrome":"Not Palindrome");
+		System.out.printf("String madam  is %s\n",pal.isPalindrome("madam")?"Palindrome":"Not Palindrome");
+		System.out.printf("String Madam  is %s\n",pal.isPalindrome("Madam")?"Palindrome":"Not Palindrome");
+		System.out.printf("String rar    is %s\n",pal.isPalindrome("rar")?"Palindrome":"Not Palindrome");
+		System.out.printf("String maam   is %s\n",pal.isPalindrome("maam")?"Palindrome":"Not Palindrome");
+		
+	}
+	
+	public boolean isPalindrome(String s){
+		if(s.length() == 0 || s.length() == 1){
+			return true;
+		}else{
+			 if(s.charAt(0) == s.charAt(s.length()-1))
+				 return isPalindrome(s.substring(1, s.length()-1));
+		}
+		return false;
+	}
+
+}
+/**
+ * RecursiveBinarySearch.java
+ */
+package edu.mum.mscs.fpp.homework.w1d5;
+
+/**
+ * 3. Perform binary search using recursive method
+ * 
+ * output: 
+ * 	Found 35 at 4 index
+	Found 80 at 5 index
+	Found 15 at 3 index
+
+ * @author janardhanbonu
+ *
+ */
+public class RecursiveBinarySearch {
+
+	public static void main(String[] args) {
+        
+        int[] ints = {3,5,14,15,35,80,91,99};
+        int index = binarySearch(ints,35,0,ints.length);
+        System.out.println("Found 35 at "+index+" index");
+        index = binarySearch(ints,80,0,ints.length);
+        System.out.println("Found 80 at "+index+" index");
+        index = binarySearch(ints,15,0,ints.length);
+        System.out.println("Found 15 at "+index+" index");
+    }
+	
+	public static int binarySearch(int[] ints, int searchNum, int iStart, int iEnd) {
+        
+        if (iStart < iEnd) {
+            int mid = iStart + (iEnd - iStart) / 2; 
+            if (searchNum < ints[mid]) {
+                return binarySearch(ints, searchNum, iStart, mid);
+                 
+            } else if (searchNum > ints[mid]) {
+                return binarySearch(ints, searchNum, mid+1, iEnd);
+                 
+            } else {
+                return mid;  
+            }
+        }
+        return iStart; 
+    }
+
+}
+/**
+ * 4. Recursive Addition
+ */
+package edu.mum.mscs.fpp.homework.w1d5;
+
+/**
+ * Add the items in an array recursively.
+ * 
+ * Output:
+ * 
+ *  Item :3 Index:0  Result3
+	Item :5 Index:1  Result8
+	Item :14 Index:2  Result22
+	Item :15 Index:3  Result37
+	Item :35 Index:4  Result72
+	Item :80 Index:5  Result152
+	Item :91 Index:6  Result243
+	Item :99 Index:7  Result342
+	342
+	Item :1 Index:0  Result1
+	Item :2 Index:1  Result3
+	Item :3 Index:2  Result6
+	Item :4 Index:3  Result10
+	Item :5 Index:4  Result15
+	15
+
+
+ * @author janardhanbonu
+ *
+ */
+public class RecursiveAddition {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int[] items = {3,5,14,15,35,80,91,99};
+		RecursiveAddition ra = new RecursiveAddition();
+		System.out.println(ra.addItems(items, items.length-1));
+		int[] items2 = {1,2,3,4,5};
+		System.out.println(ra.addItems(items2, items2.length-1));
+
+	}
+	
+	public int addItems(int[] items, int index){
+		if(index >= 0){
+			int result =  items[index] + addItems(items, index-1);
+			System.out.println("Item :"+items[index]+" Index:"+index +"  Result"+result);
+			return result;
+		}
+		return 0;
+	}
+
+}
