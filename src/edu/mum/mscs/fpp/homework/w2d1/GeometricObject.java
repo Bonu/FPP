@@ -1,5 +1,5 @@
 /**
- * 
+ * GeometricObject.java
  */
 package edu.mum.mscs.fpp.homework.w2d1;
 
@@ -48,18 +48,10 @@ public class GeometricObject {
 		return new Date();
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-	
 	@Override
 	public String toString() {
-		return "GeometricObject [color=" + color + ", filled=" + filled
-				+ ", dateCreated=" + getDateCreated() + "]";
-	}
+		return  "Created on :"+ getDateCreated() + "\n Color: "+ color + " \n Filled :"+ filled;
+	 }
+
 
 }
