@@ -48,6 +48,18 @@ import java.util.Scanner;
 	If the user responds "Y", then loop through the department array and polymorphically read, 
 	and sum, all salaries, and output the result to the console.
  *
+ *
+ *Output:
+ *
+ *  Professor [name=Alan Turing, salary=40000.0, hireDate=Sat Apr 12 22:22:53 CDT 2003, numberOfPublications=10]
+	Professor [name=Stephan Paulicke, salary=28000.0, hireDate=Fri Aug 25 22:22:53 CDT 2006, numberOfPublications=10]
+	Professor [name=Timm Roser, salary=55000.0, hireDate=Thu Dec 02 22:22:53 CST 1999, numberOfPublications=10]
+	Secretary [name=Mariska Nyoug, salary=22000.0, hireDate=Sat Aug 02 22:22:53 CDT 2003, overtimeHours=200.0]
+	Secretary [name=Chig Chu, salary=10000.0, hireDate=Sun Jun 22 22:22:53 CDT 2008, overtimeHours=200.0]
+	Do you wish to see the sum of all salaries in the department ? Y/N
+	y
+	Sum of all salaries in the department : 155000.00
+	
  * @author janardhanbonu
  *
  */
@@ -63,12 +75,12 @@ public class EmployeeManagementApp {
 		DeptEmployee[] department = new DeptEmployee[5];
 		department[0] = new Professor("Alan Turing", 40000, extractDate(03,12,2003), 10);
 		department[1] = new Professor("Stephan Paulicke", 28000, extractDate(07,25,2006), 10);
-		department[2] = new Professor("Timm Roser", 50000,extractDate(11,02,1999), 10);
+		department[2] = new Professor("Timm Roser", 55000,extractDate(11,02,1999), 10);
 		department[3] = new Secretary("Mariska Nyoug", 22000, extractDate(07,02,2003), 200);
 		department[4] = new Secretary("Chig Chu", 10000, extractDate(05,22,2008), 200);
 		
 		for (DeptEmployee deptEmployee : department) {
-			deptEmployee.toString();
+			System.out.println(deptEmployee.toString());
 		}
 		
 		Scanner input = new Scanner(System.in);
