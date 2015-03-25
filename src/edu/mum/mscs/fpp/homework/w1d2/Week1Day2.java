@@ -21,8 +21,8 @@ public class Week1Day2 {
 		Week1Day2 d2 = new Week1Day2();
 		
 //		d2.weightOnPlanets();
-//		d2.compareUSMexicoPopulation();
-		d2.rhombus();
+		d2.compareUSMexicoPopulation();
+//		d2.rhombus();
 //		d2.studentGrades();
 		
 	}
@@ -232,10 +232,27 @@ public class Week1Day2 {
 	 */
 	
 	public void compareUSMexicoPopulation() {
+//		
+//		for(double m=114000000,u=312000000,i=0;m < u;m=m+(m*10.1/100),u=u-(m*5.15/100),i++) {
+//			System.out.println("Mexico population:"+m+" US Population:"+u +"Number of years :"+i);
+//		}
 		
-		for(double m=114000000,u=312000000,i=0;m < u;m=m+11411400,u=u-16068000,i++) {
-			System.out.println("Mexico population:"+m+" US Population:"+u +"Number of years :"+i);
-		}
+	    float mexico_growth = (float) 10.1;
+	   	float us_growth = (float) 5.15;
+	   	long usPopu  = 312000000;
+	   	long mexicoPopu =  114000000;
+	   	int year = 1;
+	   	System.out.println("Year \t US Population \t Mexico Population");			while(mexicoPopu <= usPopu)
+	   	    {
+	   	     usPopu = usPopu + (long)((usPopu*us_growth)/100);
+	   	     mexicoPopu = mexicoPopu + (long)((mexicoPopu*mexico_growth)/100);
+	   	     System.out.println(year+ "\t"+usPopu+"\t" + mexicoPopu );
+	   		year++;
+	   	    }
+	                 year--;
+	   		System.out.println("The number of years  is "+year);
+	   	
+
 		
 	}
 	
