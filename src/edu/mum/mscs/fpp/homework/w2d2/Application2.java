@@ -86,8 +86,9 @@ class Secretary implements Employee {
 	public double calcMonthlySalary() {
 		int totalSalary = 0;
 		if (noOfYearsWork > 5) {
-			totalSalary = 
+//			totalSalary = 
 		}
+		return 0;
 	}
 
 }
