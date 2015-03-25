@@ -4,7 +4,7 @@
 package edu.mum.mscs.fpp.homework.w2d1;
 
 /**
- * 3.	Develop a code for the given class diagram
+ * 3.1	Develop a code for the given class diagram
  * Code for the toString() Method in GeometricObject.
 	public String toString()
 	 {

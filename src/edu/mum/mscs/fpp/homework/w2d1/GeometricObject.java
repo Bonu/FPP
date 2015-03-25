@@ -6,6 +6,9 @@ package edu.mum.mscs.fpp.homework.w2d1;
 import java.util.Date;
 
 /**
+ * 
+ * 3.2 
+ *  
  * @author janardhanbonu
  *
  */
@@ -26,6 +29,7 @@ public class GeometricObject {
 		super();
 		this.color = color;
 		this.filled = filled;
+		this.dateCreated = new Date();
 	}
 
 	public String getColor() {
@@ -45,7 +49,7 @@ public class GeometricObject {
 	}
 
 	public Date getDateCreated() {
-		return new Date();
+		return dateCreated;
 	}
 
 	@Override
