@@ -6,6 +6,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+/**
+ * 1.	Create three buttons named as yellow, green and blue. Implement  actionListener to the button 
+ * to change the background color. For example the user click yellow button, the background of the 
+ * content pane change to yellow.
+ * 
+ * @author 984417
+ *
+ */
 public class BorderLayoutTest {
 	
 	JFrame myFrame = new JFrame("BorderLayout Test");
