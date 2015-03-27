@@ -30,6 +30,11 @@ public class DigitalCamera {
 		}
 	}
 	
+	public static void main(String args[]){
+		DigitalCamera dc = new DigitalCamera("Sony", 12);
+		
+	}
+	
 	public void dispalyCameraDetails() {
 		System.out.printf("Brand : %s \t Resolution : %d \tPrice : %d \n", brand, resolution, price);
 	}

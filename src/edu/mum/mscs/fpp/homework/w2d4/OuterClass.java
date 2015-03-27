@@ -57,9 +57,9 @@ public class OuterClass {
 	public static void main(String[] args) {
 
 		OuterClass.InnerClass ic = new OuterClass().new InnerClass();
-		System.out.println(ic.maxArray());
-		System.out.println(ic.minArray());
-		System.out.println(ic.avgArray());
+		System.out.println("Max value in an array : "+ic.maxArray());
+		System.out.println("Min value in an array : "+ic.minArray());
+		System.out.println("Average of the int array : "+ic.avgArray());
 		
 	}
 
