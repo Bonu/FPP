@@ -9,6 +9,12 @@ import java.util.Arrays;
  * 1. Create an outer class with a data member for an Integer array. Create an inner 
  * class to identify the minimum, maximum, average value of the integer array.
  * 
+ * output:
+ *  Max value in an array : 83
+	Min value in an array : 14
+	Average of the int array : 52
+	
+
  * @author 984417
  *
  */

@@ -6,6 +6,20 @@ package edu.mum.mscs.fpp.homework.w2d4;
 import java.util.Arrays;
 
 /**
+ * 
+ * 2.	Create a local class to determine the given array of input is even oriented or odd oriented.
+	Example : [ 10, 15, 20, 30, 5]
+	Sum of Even numbers : 60
+	Sum of Odd numbers : 20
+	Conclude that the given array is Even oriented.
+ * 
+ * output:
+ *  1. OddEvenArrays Constructor called...
+	2. Outer method determineEvenOdd is called..
+	3. Local constructor called..
+	4. arrayOrientation method is called
+	5. The array [23, 54, 67, 24, 57, 87, 34, 60, 58, 23] is Odd Oriented
+ *
  * @author janardhanbonu
  *
  */
