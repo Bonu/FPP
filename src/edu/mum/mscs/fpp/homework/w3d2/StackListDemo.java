@@ -1,15 +1,28 @@
 package edu.mum.mscs.fpp.homework.w3d2;
 
 /**
- * 1.	Implement Stack data structure using LinkedList to perform the following operations. ( Should be user defined)
-a.	Push()
-b.	Pop()
-c.	Peek()
-d.	Size()
-e.	IsEmpty()
-f.	DisplayAll() – All elements in the Stack
+ * 1.	Implement Stack data structure using LinkedList to perform the following operations.
+ *  ( Should be user defined)
+	a.	Push()
+	b.	Pop()
+	c.	Peek()
+	d.	Size()
+	e.	IsEmpty()
+	f.	DisplayAll() – All elements in the Stack
 
 Output:
+	Queue Empty ? -->true
+	------After push------
+	-->Obj 3-->Obj 2-->Obj 1
+	
+	
+	------After pop------
+	-->Obj 2-->Obj 1
+	
+	------After peek------
+	Obj 2
+	Size ->2
+	Queue Empty ? -->false
 
  * @author janardhanbonu
  *
@@ -22,7 +35,7 @@ public class StackListDemo {
 	
 	public static void main(String args[]){
 		Stack stk = new StackList();
-		System.out.println("Empty -->"+stk.isEmpty());
+		System.out.println("Queue Empty ? -->"+stk.isEmpty());
 		stk.push("Obj 1");
 		stk.push("Obj 2");
 		stk.push("Obj 3");
@@ -34,8 +47,7 @@ public class StackListDemo {
 		System.out.println("------After peek------");
 		System.out.println(stk.peek());
 		System.out.println("Size ->"+stk.getSize());
-		System.out.println("Empty -->"+stk.isEmpty());
-		
+		System.out.println("Queue Empty ? -->"+stk.isEmpty());
 	}
 
 }

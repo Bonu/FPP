@@ -1,20 +1,27 @@
 /**
- * 2.	Implement Queue data structure using Array to perform the following operations. ( Should be user defined)
-a.	Insert()
-b.	Remove()
-c.	IsEmpty()
-d.	Size()
-e.	Peek()
-f.	DisplayAll() – All items in the Queue
-
-
-Output:
-
-
  */
 package edu.mum.mscs.fpp.homework.w3d2;
 
 /**
+ * 2.	Implement Queue data structure using Array to perform the following operations. ( Should be user defined)
+	a.	Insert()
+	b.	Remove()
+	c.	IsEmpty()
+	d.	Size()
+	e.	Peek()
+	f.	DisplayAll() – All items in the Queue
+	
+ * output:
+ * 
+ * ------Is empty-----true
+	------Insert Operation-------
+	[Value 1, Value 2, Value 3, Value 4]
+	------Remove Operation-------
+	[Value 2, Value 3, Value 4]
+	------Peek Operation-------Value 2
+	------Size-------3
+	------Is empty-----false
+
  * @author janardhanbonu
  *
  */
