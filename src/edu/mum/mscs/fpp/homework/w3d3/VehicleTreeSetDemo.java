@@ -11,11 +11,11 @@ import java.util.TreeSet;
  * Output:
  * 
  * [
-Vehicle [name=BMW, price=340000.0, model=BMW 525 di], 
-Vehicle [name=Ferrai, price=120000.0, model=Honda], 
-Vehicle [name=Land Rover, price=78000.0, model=Rover], 
-Vehicle [name=Mercedes, price=200000.0, model=Mercides 15], 
-Vehicle [name=Toyota, price=98000.0, model=Toyota Corola]]
+	Vehicle [name=BMW, price=340000.0, model=BMW 525 di], 
+	Vehicle [name=Ferrai, price=120000.0, model=Honda], 
+	Vehicle [name=Land Rover, price=78000.0, model=Rover], 
+	Vehicle [name=Mercedes, price=200000.0, model=Mercides 15], 
+	Vehicle [name=Toyota, price=98000.0, model=Toyota Corola]]
 
  * 
  * @author janardhanbonu
